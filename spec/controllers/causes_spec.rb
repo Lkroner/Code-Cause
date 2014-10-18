@@ -1,6 +1,10 @@
 require 'rails_helper'
 describe CausesController do
 
+  before :each do
+    Cause.destroy_all
+  end
+
     xit "successfully creates a new cause" do
       expect {
         post :create, name: "hi", description: "hi", help_needed: "hi"
@@ -17,7 +21,7 @@ describe CausesController do
     		Cause.update_attributes(name: 'meep')
     	}.to change {Cause.name}
     end
-    xit "successfully destroy a new cause" do
+    xit "successfully destroys a cause" do
       expect {
         post :destroy, name: "hi", description: "hi", help_needed: "hi"
       }.to change { Cause.count }
