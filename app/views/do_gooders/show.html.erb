@@ -1,1 +1,8 @@
-<h1>Welcome <%= @do_gooder.first_name.capitalize %> <%= @do_gooder.last_name.capitalize %></h1>
+<% if current_user %>
+  <h1>Welcome <%= @do_gooder.name.capitalize %></h1>
+
+  <h2>About Me: <%= @do_gooder.about %></h2>
+
+    <button ><%= link_to "Create New Cause", INSERT ACTION HERE %></button>
+
+<% end %>
