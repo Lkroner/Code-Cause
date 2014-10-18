@@ -70,4 +70,5 @@ class CreateTables < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
 end
