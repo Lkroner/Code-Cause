@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017225059) do
+ActiveRecord::Schema.define(version: 20141018184854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20141017225059) do
     t.datetime "updated_at"
   end
 
-  create_table "causes_coders", force: true do |t|
+  create_table "causes_users", force: true do |t|
     t.integer  "cause_id"
     t.integer  "coder_id"
     t.boolean  "confirmed",  default: false
@@ -48,14 +48,7 @@ ActiveRecord::Schema.define(version: 20141017225059) do
     t.datetime "updated_at"
   end
 
-  create_table "causes_do_gooders", force: true do |t|
-    t.integer  "cause_id"
-    t.integer  "do_gooder_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "coders", force: true do |t|
+  create_table "users", force: true do |t|
     t.string   "name",                limit: 50,                  null: false
     t.string   "email",               limit: 70,                  null: false
     t.string   "about",               limit: 400
@@ -77,14 +70,7 @@ ActiveRecord::Schema.define(version: 20141017225059) do
     t.string   "other"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "do_gooders", force: true do |t|
-    t.string   "name",       limit: 50,  null: false
-    t.string   "email",      limit: 70,  null: false
-    t.string   "about",      limit: 400
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "type",                                            null: false
   end
 
 end
