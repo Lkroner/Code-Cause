@@ -1,28 +1,10 @@
-== README
+== CODE CAUSE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Code Cause is a Rails App that links more and less technical do-gooders. Coders can browse Cause Profiles that have been submitted by non-profits, charitable organizations and neighborhood organizers. Coders can build up their portfolios while contributing their skills pro bono to worthy causes they care about.
 
-Things you may want to cover:
+* A Do-gooder can create a "Cause Profile" that describes their project, along with a list of skills and technologies they would need their prospective Coder to have.
 
-* Ruby version
+* A Coder can browse Cause Profiles and express interest in a cause.
 
-* System dependencies
+* Once a Coder has expressed interest in a cause, the do-gooder is then able to view the coder's profile and contact information.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
