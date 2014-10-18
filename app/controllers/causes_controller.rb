@@ -1,9 +1,11 @@
 class CausesController < ApplicationController	
 
 	def index
+		@causes = Cause.all
   end
 
   def new
+		@cause = Cause.new
   end
 
   def create
