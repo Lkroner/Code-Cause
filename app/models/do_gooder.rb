@@ -1,0 +1,2 @@
+class DoGooder < User
+end
