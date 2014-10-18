@@ -4,6 +4,14 @@ def one_in_eight_chance
   Array.new(7, false).push(true).sample
 end
 
+def three_in_four_chance
+  Array.new(3, true).push(false).sample
+end
+
+def rand_cause_id
+  rand(50)+1
+end
+
 50.times do
   Cause.create!(name: Faker::Company.name,
                                 description: Faker::Company.catchphrase,
