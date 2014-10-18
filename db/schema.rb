@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018190358) do
+ActiveRecord::Schema.define(version: 20141018222316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cause_users", force: true do |t|
+    t.integer  "cause_id"
+    t.integer  "user_id"
+    t.boolean  "confirmed",  default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "causes", force: true do |t|
     t.string   "name",                limit: 50,                  null: false
@@ -39,14 +47,6 @@ ActiveRecord::Schema.define(version: 20141018190358) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "picture"
-  end
-
-  create_table "causes_users", force: true do |t|
-    t.integer  "cause_id"
-    t.integer  "coder_id"
-    t.boolean  "confirmed",  default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
