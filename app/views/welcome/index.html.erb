@@ -7,9 +7,9 @@
 <!--  -->
 <h4>Sign Up as a Coder</h4>
 <%= form_for @coder, {action: "create"} do |f| %>
-	<%= f.text_field :name, placeholder: "Name" %>
+	<%= f.text_field :name, placeholder: "Name", required: true %>
 	<br>
-	<%= f.text_field :email, placeholder: "Email" %>
+	<%= f.text_field :email, placeholder: "Email", required: true %>
 	<br>
 	<%= f.text_field :picture, placeholder: "Image Link" %>
 	<br>
@@ -20,9 +20,9 @@
 <!--  -->
 <h4>Sign Up as a Do-Gooder</h4>
 <%= form_for @do_gooder, {action: "create"} do |f| %>
-	<%= f.text_field :name, placeholder: "Name" %>
+	<%= f.text_field :name, placeholder: "Name", required: true %>
 	<br>
-	<%= f.text_field :email, placeholder: "Email" %>
+	<%= f.text_field :email, placeholder: "Email", required: true %>
 	<br>
 	<%= f.text_field :picture, placeholder: "Image Link" %>
 	<br>
