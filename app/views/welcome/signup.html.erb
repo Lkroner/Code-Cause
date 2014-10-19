@@ -1,15 +1,15 @@
 <!--  -->
 <h4>Sign Up as a Coder</h4>
 <%= form_for @coder, { action: "create" } do |f| %>
-	<%= f.text_field :name, placeholder: "Name" %>
+	<%= f.text_field :name, placeholder: "Name", required: true %>
 	<br>
-	<%= f.text_field :email, placeholder: "Email" %>
+	<%= f.text_field :email, placeholder: "Email", required: true %>
 	<br>
 	<%= f.text_field :picture, placeholder: "Image Link" %>
 	<br>
-	<%= f.password_field :password, placeholder: "Password" %>
+	<%= f.password_field :password, placeholder: "Password", required: true %>
 	<br>
-	<%= f.password_field :password_confirmation, placeholder: "Password" %>
+	<%= f.password_field :password_confirmation, placeholder: "Re-type Password", required: true %>
 	<%= hidden_field_tag 'title', 'coder' %>
 	<%= f.submit 'submit' %>
 <% end %>
@@ -17,15 +17,15 @@
 <!--  -->
 <h4>Sign Up as a Do-Gooder</h4>
 <%= form_for @do_gooder, {action: "create"} do |f| %>
-	<%= f.text_field :name, placeholder: "Name" %>
+	<%= f.text_field :name, placeholder: "Name", required: true %>
 	<br>
-	<%= f.text_field :email, placeholder: "Email" %>
+	<%= f.text_field :email, placeholder: "Email", required: true %>
 	<br>
 	<%= f.text_field :picture, placeholder: "Image Link" %>
 	<br>
-	<%= f.password_field :password, placeholder: "Password" %>
+	<%= f.password_field :password, placeholder: "Password", required: true %>
 	<br>
-	<%= f.password_field :password_confirmation, placeholder: "Password" %>
+	<%= f.password_field :password_confirmation, placeholder: "Re-type Password", required: true %>
 	<%= hidden_field_tag 'title', 'do-gooder' %>
 	<%= f.submit 'submit' %>
 <% end %>

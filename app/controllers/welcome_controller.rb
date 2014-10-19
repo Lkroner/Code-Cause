@@ -9,4 +9,7 @@ class WelcomeController < ApplicationController
     @coder = Coder.new
     @do_gooder = DoGooder.new
   end
+
+  def login
+  end
 end
