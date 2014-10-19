@@ -6,7 +6,11 @@ class Cause < ActiveRecord::Base
 
   validates :name, length: { minimum: 5 }
 
-SKILLS = {
+  def self.search(query)
+    where("name like ?", "%#{query}%")
+  end
+
+  SKILLS = {
     :web_design => "Web Design",
     :web_development => "Web Development",
     :ios_development => "iOS Development",

@@ -1,7 +1,11 @@
 class CausesController < ApplicationController
 
   def index
-    @causes = Cause.all
+    if params[:search]
+      @causes = Cause.search(params[:search]).order("created_at DESC")
+    else
+      @causes = Cause.order("created_at DESC")
+    end
   end
 
   def new
@@ -23,5 +27,11 @@ class CausesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def coder_params
+    params.require(:coder).permit(:name, :description, :picture, :help_needed)
   end
 end
