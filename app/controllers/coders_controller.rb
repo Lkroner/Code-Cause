@@ -26,6 +26,6 @@ class CodersController < ApplicationController
 	private
 
 	def coder_params
-		params.require(:coder).permit(:name, :email, :picture, :title)
+		params.require(:coder).permit(:name, :email, :picture, :title. :password)
 	end
 end
