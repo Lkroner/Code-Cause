@@ -1,4 +1,4 @@
-class CausesController < ApplicationController	
+class CausesController < ApplicationController
 
 	def index
 		@causes = Cause.all
@@ -6,6 +6,7 @@ class CausesController < ApplicationController
 
   def new
 		@cause = Cause.new
+    render :action => 'new'
   end
 
   def create
@@ -18,6 +19,7 @@ class CausesController < ApplicationController
   end
 
   def show
+
   end
 
   def destroy
