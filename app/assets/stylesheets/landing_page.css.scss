@@ -27,8 +27,7 @@ h1 {
 	font-weight: 300;
 }
 #home {
-
-	background: url('/assets/thumbs-up.jpg');
+	background: asset_url('thumbs-up.jpg');
 	background-attachment: fixed;
 	background-clip: initial;
 	background-origin: initial;
