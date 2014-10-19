@@ -1,4 +1,40 @@
 class Coder < User
+  SKILLS = {
+    :web_design => "Web Design",
+    :web_development => "Web Development",
+    :ios_development => "iOS Development",
+    :android_development => "Android Development",
+    :data_analysis => "Data Analysis",
+    :algorithm_design => "Algorithm Design",
+    :ruby_on_rails => "Ruby on Rails",
+    :django => "Django",
+    :html_css => "HTML and CSS",
+    :ruby => "Ruby",
+    :python => "Python",
+    :javascript => "JavaScript",
+    :java => "Java",
+    :cpp => "C++",
+    :c => "C",
+  }
+
+
+    SKILLS = {
+    :web_design => "Web Design",
+    :web_development => "Web Development",
+    :ios_development => "iOS Development",
+    :android_development => "Android Development",
+    :data_analysis => "Data Analysis",
+    :algorithm_design => "Algorithm Design",
+    :ruby_on_rails => "Ruby on Rails",
+    :django => "Django",
+    :html_css => "HTML and CSS",
+    :ruby => "Ruby",
+    :python => "Python",
+    :javascript => "JavaScript",
+    :java => "Java",
+    :cpp => "C++",
+    :c => "C",
+  }
 
   def skills
     skill_array = []

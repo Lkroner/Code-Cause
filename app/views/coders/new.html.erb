@@ -1,0 +1,23 @@
+<div>
+  <%= form_for(@coder) do |f| %>
+  <ul>
+    <%= f.label :name %><br>
+    <%= f.text_area :name, required: true %>
+  </ul>
+  <ul>
+    <%= f.label :about %><br>
+    <%= f.text_area :about, required: true %>
+  </ul>
+  <ul>
+    <% Coder::SKILLS.each do |skill, skill_string| %>
+      <li>
+        <%= check_box_tag(skill) %>
+        <%= label_tag(skill, skill_string) %>
+      </li>
+    <% end %>
+  </ul>
+  <ul>
+    <%= f.submit "Create Profile" %>
+  </ul>
+  <% end %>
+</div>
