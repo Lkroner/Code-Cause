@@ -1,8 +1,7 @@
-class WelcomeController < ApplicationController	
+class WelcomeController < ApplicationController
 
-	def index
+  def index
     @causes = Cause.take(5)
-
   end
 
   def signup
@@ -11,5 +10,11 @@ class WelcomeController < ApplicationController
   end
 
   def login
+  end
+
+  def logout
+    session[:id] = nil
+
+    redirect_to root_path
   end
 end
