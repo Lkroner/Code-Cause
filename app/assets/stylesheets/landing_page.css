@@ -1,25 +1,53 @@
 body { 
+
 	font-family: 'Helvetica Neue', cursive;
   margin:0;
   padding:0
 }
 h1 {
 
-	color: red;
-	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-family: 'Pontano Sans', sans-serif;
 	font-size: 80pt;
 }
+#logo{
+
+	color: #186218;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 18pt;
+}
+#home h1{
+	background-color: #d3d3d3;
+	opacity: .8;
+}
 #home {
-	background: url('/assets/charity.jpg');
+
+	background: url('/assets/thumbs-up.jpg');
 	background-attachment: fixed;
 	background-clip: initial;
 	background-origin: initial;
 	background-size: cover;
-  background-position: 100% 0; 	
-	background-repeat: no-repeat;		
-	min-height: 1080px;
+  background-position: 100% 0;
+	background-repeat: no-repeat;
+	font-family: 'Helvetica', sans-serif;
+	min-height: 900px;
 	padding: 10em;
-	position: relative;	
+	position: relative;
+	text-align: center;
+}
+#stat {
+
+	background: grey;
+	background-attachment: fixed;
+	background-clip: initial;
+	background-origin: initial;
+	background-size: cover;
+  background-position: 100% 0;
+	background-repeat: no-repeat;
+	min-height: 500px;
+	opacity: 0.5;
+	padding: 10em;
+	position: relative;
 }
 #about {
 
@@ -29,20 +57,7 @@ h1 {
 	background-origin: initial;
 	background-size: cover;
   background-position: 100% 0; 	
-	background-repeat: no-repeat;	
-	min-height: 100%;
-	padding: 10em;
-	position: relative;	
-}
-#stat {
-
-	background: url("http://www.outsidethebeltway.com/wp-content/uploads/2011/09/charity.jpg");
-	background-attachment: fixed;
-	background-clip: initial;
-	background-origin: initial;
-	background-size: cover;
-  background-position: 100% 0; 	
-	background-repeat: no-repeat;		
+	background-repeat: no-repeat;
 	min-height: 100%;
 	padding: 10em;
 	position: relative;	
