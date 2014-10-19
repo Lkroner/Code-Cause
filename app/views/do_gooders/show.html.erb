@@ -3,8 +3,16 @@
 
   <h2>About Me: <%= @do_gooder.about %></h2>
 
+  <div>
+  MY CAUSES:<br/>
+  <% @do_gooder.causes.each do |cause| %>
+    <%= cause.name %><br/>
+    <%= cause.description %><br/>
+  <% end %>
+ </div>
+
 <!-- a button goes here goes here for the action to create a new cause -->
-<button class="btn btn-default" id="create-cause">MAKE A FUCKIN' CAUSE. WHY? CAUSE.</button>
+<button class="btn btn-default" id="create-cause">CREATE A CAUSE PROFILE.</button>
 <div id="cause-form"></div>
 
 <% end %>
