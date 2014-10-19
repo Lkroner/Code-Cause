@@ -1,12 +1,12 @@
 class CausesController < ApplicationController
 
-	def index
-		@causes = Cause.all
+  def index
+    @causes = Cause.all
   end
 
   def new
-		@cause = Cause.new
-    render :action => 'new'
+    @cause = Cause.new
+    render action: 'new', layout: false
   end
 
   def create
