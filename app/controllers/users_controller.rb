@@ -1,11 +1,6 @@
 class UsersController < ApplicationController
 	def redirect
 		@user = User.find_by_email(params[:email])
-		puts "==================================="
-		puts "I'm here"
-		p @user
-		p params
-		puts "==================================="
 		# user exists
 		if  @user && @user.authenticate(params[:password])
 			session[:id] == @user.id
@@ -15,7 +10,6 @@ class UsersController < ApplicationController
 				redirect_to do_gooder_path(@user)
 			end
 		else # user doesn't exist
-			puts "============== USER DOESN'T EXIST ============="
 			redirect_to :back
 		end
 	end
