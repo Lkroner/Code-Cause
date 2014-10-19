@@ -37,6 +37,7 @@ end
 100.times do
   Cause.find(rand_cause_id).coders.create(name: Faker::Name.name,
                                           email: Faker::Internet.email,
+                                          password: "password",
                                           about: Faker::Lorem.sentences.join(" "),
                                           web_design: one_in_eight_chance,
                                           web_development: one_in_eight_chance,
@@ -60,6 +61,7 @@ Cause.all.each do |cause|
   (rand(3)+1).times do
     cause.do_gooders.create(name: Faker::Name.name,
                             email: Faker::Internet.email,
+                            password: "password",
                             about: Faker::Lorem.sentences.join(" "))
   end
 end
