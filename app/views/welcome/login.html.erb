@@ -1,8 +1,8 @@
 <h3>Log In</h3>
-<%= form_for @user, { controller: "user", action: "redirect" } do |f| %>
-	<%= f.text_field :email, placeholder: "Email", required: true %>
-	<br>
-	<%= f.password_field :password, placeholder: "Password", required: true %>
-	<%= hidden_field_tag 'title', 'coder' %>
-	<%= f.submit 'submit' %>
+<%= form_tag('/redirect', method: "get") do %>
+	<%= label_tag(:email, "Email:") %>
+	<%= text_field_tag(:email) %>
+	<%= label_tag(:password, "Password:") %>
+	<%= password_field_tag(:password) %>
+	<%= submit_tag("Submit") %>
 <% end %>

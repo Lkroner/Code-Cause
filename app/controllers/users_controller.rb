@@ -7,14 +7,16 @@ class UsersController < ApplicationController
 		p params
 		puts "==================================="
 		# user exists
-		if @user.password == params[:password]
+		if  @user && @user.authenticate(params[:password])
+			session[:id] == @user.id
 			if @user.type == "Coder"
 				redirect_to coder_path(@user)
 			else
-				# redirect_to somewhere else
+				redirect_to do_gooder_path(@user)
 			end
 		else # user doesn't exist
-
+			puts "============== USER DOESN'T EXIST ============="
+			redirect_to :back
 		end
 	end
 end
