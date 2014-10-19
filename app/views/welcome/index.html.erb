@@ -1,31 +1,12 @@
-<% @causes.each do |cause| %>
-	<ul>
-		<li><%= cause.name %> <br/> <%= cause.description %> </li>
-	</ul>
-<% end %>
+<div id="home" class="bg_parallax" data-type="background" data-speed="10">
+	<h1>Code / Cause</h1>
+</div>
 
-<!--  -->
-<h4>Sign Up as a Coder</h4>
-<%= form_for @coder, {action: "create"} do |f| %>
-	<%= f.text_field :name, placeholder: "Name", required: true %>
-	<br>
-	<%= f.text_field :email, placeholder: "Email", required: true %>
-	<br>
-	<%= f.text_field :picture, placeholder: "Image Link" %>
-	<br>
-	<%= hidden_field_tag 'title', 'coder' %>
-	<%= f.submit 'submit' %>
-<% end %>
+<div id="stat" class="bg_parallax" data-type="background" data-speed="20">
+	<h1>Stat</h1>
+</div>
 
-<!--  -->
-<h4>Sign Up as a Do-Gooder</h4>
-<%= form_for @do_gooder, {action: "create"} do |f| %>
-	<%= f.text_field :name, placeholder: "Name", required: true %>
-	<br>
-	<%= f.text_field :email, placeholder: "Email", required: true %>
-	<br>
-	<%= f.text_field :picture, placeholder: "Image Link" %>
-	<br>
-	<%= hidden_field_tag 'title', 'do-gooder' %>
-	<%= f.submit 'submit' %>
-<% end %>
+<div id="about" class="bg_parallax" data-type="background" data-speed="40">
+	<h1>About</h1>
+</div>
+
