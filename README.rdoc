@@ -7,17 +7,18 @@ Code Cause is a Rails App that links more and less technical do-gooders. Coders 
 * A Coder can browse Cause Profiles and express interest in a cause.
 
 * Once a Coder has expressed interest in a cause, the do-gooder is then able to view the coder's profile and contact information.
-
+-----
 Usage:
 
 To log in as a coder
------
+
 email: guest-coder@mail.com
 password: password
 
+
 To log in as a do-gooder
------
+
 email: guest-do-gooder@mail.com
 password: password
-
+-----
 Intial version created for the Rails Rumble 2014 Hackathon by John Akers, Alex Birdsall, Lauren Kroner, and Danielle Sublett
