@@ -1,0 +1,23 @@
+<div>
+  <%= form_for(@cause) do |f| %>
+  <ul>
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </ul>
+  <ul>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </ul>
+  <ul>
+    <% Cause::SKILLS.each do |skill, skill_string| %>
+      <li>
+        <%= check_box_tag(skill) %>
+        <%= label_tag(skill, skill_string) %>
+      </li>
+    <% end %>
+  </ul>
+  <ul>
+    <%= f.submit "Create Cause" %>
+  </ul>
+  <% end %>
+</div>
