@@ -1,8 +1,7 @@
-class WelcomeController < ApplicationController	
+class WelcomeController < ApplicationController
 
-	def index
+  def index
     @causes = Cause.take(5)
-
   end
 
   def signup

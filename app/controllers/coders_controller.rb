@@ -1,32 +1,32 @@
 class CodersController < ApplicationController
-	def index
-	end
+  def index
+  end
 
-	def new
-		@coder = Coder.new
-	end
+  def new
+    @coder = Coder.new
+  end
 
-	def create
-		@coder = Coder.new(coder_params)
+  def create
+    @coder = Coder.new(coder_params)
 
-		if @coder.save
-			session[:id] = @coder.id
-			params[:id] = @coder.id
-			redirect_to @coder
-		else
-			redirect_to :back
-		end
+    if @coder.save
+      session[:id] = @coder.id
+      params[:id] = @coder.id
+      redirect_to @coder
+    else
+      redirect_to :back
+    end
 
-	end
+  end
 
-	def show
-		@coder = Coder.find(params[:id])
-		@current_user = @coder
-	end
+  def show
+    @coder = Coder.find(params[:id])
+    @current_user = @coder
+  end
 
-	private
+  private
 
-	def coder_params
-		params.require(:coder).permit(:name, :email, :picture, :title, :password)
-	end
+  def coder_params
+    params.require(:coder).permit(:name, :email, :picture, :title, :password)
+  end
 end
