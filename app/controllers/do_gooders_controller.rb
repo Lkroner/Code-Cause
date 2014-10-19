@@ -1,32 +1,32 @@
 class DoGoodersController < ApplicationController
-	def index
-	end
+  def index
+  end
 
-	def new
-		@do_gooder = DoGooder.new
-	end
+  def new
+    @do_gooder = DoGooder.new
+  end
 
-	def create
-		@do_gooder = DoGooder.new(do_gooder_params)
+  def create
+    @do_gooder = DoGooder.new(do_gooder_params)
 
-		if @do_gooder.save
-			session[:id] = @do_gooder.id
-			params[:id] = @do_gooder.id
-			redirect_to @do_gooder
-		else
-			redirect_to :back
-		end
-		
-	end
+    if @do_gooder.save
+      session[:id] = @do_gooder.id
+      params[:id] = @do_gooder.id
+      redirect_to @do_gooder
+    else
+      redirect_to :back
+    end
 
-	def show
-		@do_gooder = DoGooder.find(params[:id])
-		@current_user = @do_gooder
-	end
+  end
 
-	private
+  def show
+    @do_gooder = DoGooder.find(params[:id])
+    @current_user = @do_gooder
+  end
 
-	def do_gooder_params
-		params.require(:do_gooder).permit(:name, :email, :picture, :title, :password)
-	end
+  private
+
+  def do_gooder_params
+    params.require(:do_gooder).permit(:name, :email, :picture, :title, :password)
+  end
 end
