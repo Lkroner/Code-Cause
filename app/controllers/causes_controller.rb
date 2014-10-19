@@ -28,4 +28,10 @@ class CausesController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def coder_params
+    params.require(:coder).permit(:name, :description, :picture, :help_needed)
+  end
 end
