@@ -21,11 +21,12 @@ class CodersController < ApplicationController
 
 	def show
 		@coder = Coder.find(params[:id])
+		@current_user = @coder
 	end
 
 	private
 
 	def coder_params
-		params.require(:coder).permit(:name, :email, :picture, :title. :password)
+		params.require(:coder).permit(:name, :email, :picture, :title, :password)
 	end
 end
