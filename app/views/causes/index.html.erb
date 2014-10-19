@@ -1,8 +1,7 @@
-<% @causes.each do |cause| %>
-
-		<div>
-			<h4><%= cause.name %></h4><br>
-			<i><%= cause.description %></i>
-		</div>
-
-<% end %>
+<div class = "cause-list">
+  <h1>Causes to Code for</h1>
+  <% @causes.each do |cause| %>
+  	<h2><%= cause.name %></h2>
+  	<h3><%= cause.description %></h3>
+  <% end %>
+</div>

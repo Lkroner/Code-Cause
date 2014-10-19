@@ -16,7 +16,7 @@ class CodersController < ApplicationController
 		else
 			redirect_to :back
 		end
-		
+
 	end
 
 	def show

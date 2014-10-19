@@ -1,1 +1,27 @@
-<h3>This is <%= @coder.name %>'s page and she is a <%= @coder.type %></h3>
+<h3><%= @coder.name %></h3>
+
+<%= @coder.about %><br/><br/>
+
+<div>
+  MY SKILLS:<br/>
+  <% @coder.skills.each do |skill| %>
+    <%= skill %><br/>
+  <% end %>
+</div>
+
+<br/><br/>
+
+<div>
+  MY CAUSES:<br/>
+  <% @coder.causes.each do |cause| %>
+    <%= cause.name %><br/>
+    <%= cause.description %><br/>
+  <% end %>
+</div>
+
+<br/><br/>
+
+<div>
+  CONTACT:<br/>
+  <%= @coder.email %>
+</div>
