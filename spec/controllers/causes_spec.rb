@@ -11,12 +11,12 @@ describe CausesController do
       }.to change { Cause.count }
     end
     xit "responds successfully with an HTTP 200 status code for showing an cause" do
-    	api = Cause.create(name: "hi", description: "hi", help_needed: "hi")
+      cause = Cause.create(name: "hi", description: "hi", help_needed: "hi")
       get :show, id: Cause.id
       expect(response).to be_success
     end
     xit "successfully updates an cause" do
-    	api = Cause.create(name: "hi", description: "hi", help_needed: "hi")
+      cause = Cause.create(name: "hi", description: "hi", help_needed: "hi")
     	expect {
     		Cause.update_attributes(name: 'meep')
     	}.to change {Cause.name}
