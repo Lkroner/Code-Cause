@@ -27,6 +27,6 @@ class DoGoodersController < ApplicationController
   private
 
   def do_gooder_params
-    params.require(:do_gooder).permit(:name, :email, :picture, :title)
+    params.require(:do_gooder).permit(:name, :email, :picture, :title, :password)
   end
 end
