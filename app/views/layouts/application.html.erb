@@ -15,12 +15,13 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search">
-						</div>
+					<%= form_tag(causes_path, method: :get, class: "navbar-form navbar-left", role:'search') do %>
+					<div class="form-group input-append">
+						<%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Causes" %>
 						<button type="submit" class="btn btn-default">Submit</button>
-					</form></li>
+					</div>
+					<% end %>
+				</li>
 				<li class="navbar-item"><%= link_to 'Sign Up', signup_path %></li>
 				<li class="navbar-item"><%= link_to 'Log In', login_path %></li>
 			</ul>
