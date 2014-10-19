@@ -19,6 +19,7 @@ class CodersController < ApplicationController
 
   end
 
+
   def show
     @coder = Coder.find(params[:id])
     @current_user = @coder

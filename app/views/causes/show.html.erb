@@ -1,0 +1,12 @@
+<h3><%= @cause.name %></h3>
+<br/><br/>
+<h3><%= @cause.description %></h3>
+<br/><br/>
+<h3><%= @cause.help_needed %></h3>
+
+<div>
+  SKILLS NEEDED:<br/>
+  <% @cause.skills.each do |skill| %>
+    <%= skill %><br/>
+  <% end %>
+</div>
