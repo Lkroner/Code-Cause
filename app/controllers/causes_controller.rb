@@ -19,7 +19,7 @@ class CausesController < ApplicationController
   end
 
   def show
-
+    @cause = Cause.find(params[:id])
   end
 
   def destroy
