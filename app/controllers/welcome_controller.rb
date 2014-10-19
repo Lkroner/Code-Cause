@@ -12,4 +12,10 @@ class WelcomeController < ApplicationController
 
   def login
   end
+
+  def logout
+    session[:id] = nil
+
+    redirect_to root_path
+  end
 end
