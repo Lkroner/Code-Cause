@@ -4,6 +4,8 @@ class Cause < ActiveRecord::Base
   has_many :coders, through: :causeUsers
   has_many :do_gooders, through: :causeUsers
 
+  validates :name, length: { minimum: 5 }
+
   SKILLS = {
     :web_design => "Web Design",
     :web_development => "Web Development",
