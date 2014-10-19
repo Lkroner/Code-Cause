@@ -1,7 +1,8 @@
-<div class = "cause-list">
-  <h1>Causes to Code for</h1>
-  <% @causes.each do |cause| %>
-  	<h2><%= cause.name %></h2>
-  	<h3><%= cause.description %></h3>
-  <% end %>
-</div>
+<% @causes.each do |cause| %>
+  <div class="cause">
+		<img src="http://www.customspeedsuits.com/images/art/2010_09_35/ribbon-for-a-cause_995_thumb.jpg">
+    <h1 class="cause-name"><%= link_to cause.name, cause %></h1>
+    <p class="cause-content"><%= cause.description %></p>
+    <p class="cause-content"><%= cause.help_needed %></p>
+  </div>
+<% end %>
