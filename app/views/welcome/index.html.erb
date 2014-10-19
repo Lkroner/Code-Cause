@@ -29,6 +29,9 @@
 	<br>
 	<%= f.text_field :picture, placeholder: "Image Link" %>
 	<br>
+	<%= f.password_field :password, placeholder: "Password" %>
+	<br>
+	<%= f.password_field :password_confirmation, placeholder: "Password" %>
 	<%= hidden_field_tag 'title', 'do-gooder' %>
 	<%= f.submit 'submit' %>
 <% end %>
